@@ -1,0 +1,173 @@
+
+/*--------------------------------------------------- Mobile ------------------------------------------------------*/
+main{
+    width: 100%;
+}
+
+main h1 {
+    font-size: 20px;
+    text-align: center;
+    color: red;
+    border: 1px solid #202020;
+    background-color: #202020;
+    border-radius: 15px;
+    padding: 5px;
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.gameDays {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background-color: #202020;
+    color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid black;
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 4px;
+}
+
+ol li {
+    text-align: left;
+    height: 25px;
+    font-size: 17px;
+    margin-left: 20px;
+}
+
+ol li button {
+    color: grey;
+    width: 25px;
+    background: none;
+    margin-left: 10px;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+
+.join {
+    border-radius: 15px;
+    margin-bottom: 15px;
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid black;
+}
+
+.popUpForm {
+    height: 300px;
+    width: 85%;
+    margin-top: 30px;
+    position: fixed;
+    top: 30%;
+}
+
+.formWrap {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #202020;
+    border-radius: 15px;
+    background-color: lightgrey;
+    padding: 10px;
+    gap: 20px;
+}
+
+.cancelWrap {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #202020;
+    border-radius: 15px;
+    background-color: lightgrey;
+    padding: 10px;
+    gap: 20px;
+}
+
+.formInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-weight: 300;
+}
+
+.formbtn{
+    display: flex;
+    gap: 10px;
+    width: 60%;
+}
+
+.formbtn button{
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #202020;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.btnSubmit{
+    background-color: rgb(100, 200, 150, 80%);
+}
+
+.btnCancel{
+    background-color: rgb(200, 50, 50, 40%)
+}
+/*------------------------------------------------------ Desktop -----------------------------------------------------*/
+
+@media only screen and (min-width: 600px) {
+    main h1{
+        padding: 5px;
+        width: 500px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .gameDays{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .games{
+        width: 300px;
+    }
+
+    ol{
+        width: 180px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width:1400px){
+    .games{
+        width: 200px;
+    }
+
+    .popUpForm {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1401px){
+    .popUpForm {
+        width: 20%;
+    }
+}

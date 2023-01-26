@@ -1,0 +1,257 @@
+
+/*--------------------------------------------------- Mobile ------------------------------------------------------*/
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 0;
+    font-family: Andale Mono, monospace;
+}
+
+/*------ Header Section ------*/
+
+header {
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 10px;
+}
+
+nav ul li {
+    padding: 10px;
+    font-size: 15px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin-top: 35px;
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 45px;
+}
+
+.title h1 {
+    font-weight: 900;
+    font-size: 36px;
+    -webkit-text-stroke: 1px #202020;
+
+}
+
+.title h3 {
+    font-weight: 900;
+    font-size: 25px;
+    margin-top: 50px;
+    -webkit-text-stroke: 1px #202020;
+}
+
+.title button {
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #202020;
+    font-size: 15px;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+/* ------ Index body ------*/
+
+main {
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgba(230, 230, 230, 30);
+    padding: 8px;
+    text-align: center;
+}
+
+main p {
+    width: 80%;
+    text-align: center;
+    letter-spacing: -1;
+    line-height: 1.4;
+    word-spacing: -3px;
+    font-size: 15px;
+}
+
+.organizers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#organizerPic {
+    object-fit: cover;
+    height: 220px;
+    width: 220px;
+    border-radius: 15px;
+}
+
+.orgDes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #202020;
+    background-color: #202020;
+    border-radius: 15px;
+    padding-top: 30px;
+    width: 300px;
+    color: white;
+}
+
+.orgDes ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.orgDes ul li a{
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+.desList{
+    list-style-type: none;
+    padding-left: 0;
+    color: lawngreen;
+}
+
+/*------ Footer Section ------*/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #202020;
+    width: 100%;
+    margin-top: 10px;
+    height: 40px;
+    font-size: 15px;
+    word-spacing: -3px;
+    line-height: 1;
+}
+
+
+/*-------------------------------------------------- Desktop -----------------------------------------------------*/
+
+@media only screen and (min-width: 600px) {
+    /*------ Header Section ------*/
+
+    nav ul {
+        gap: 30px;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    .title {
+        height: 600px;
+        background-image: url(../images/backgrounds18.jpg);
+    }
+
+    .title h1 {
+        font-size: 40px;
+    }
+
+    .title button {
+        padding: 15px;
+    }
+
+    #logo {
+        height: 120px;
+        width: 120px;
+    }
+
+    /* ------ Index body ------*/
+
+    main {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    main h1 {
+        font-size: 30px;
+    }
+
+    .organizers {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .orgDes {
+        padding: 20px;
+        width: 500px;
+        height: 500px;
+    }
+
+}

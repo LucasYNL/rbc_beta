@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en">  
+    <head>
+        <meta charset="utf-8" http-equiv="X-UA-Compatible" name="viewport" content="width=device-width, initial-scale = 1, maximum-scale = 1">
+        <link rel="stylesheet" type="text/css" href="styles/frontPage.css">
+        <link rel="stylesheet" type="text/css" href="styles/game.css">
+        <script src="scripts/signUp.js" defer></script>
+        <title>RBC</title>
+    </head>
+
+    <body id="body">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="game.html">GAMES</a></li>
+                    <li><a href="event.html">EVENTS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li> <a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Please read the terms and conditions<br>if you have not before joining.</h1>
+            <h2>WEEK PENDING</h2>
+            <div class="gameDays">
+                <div class="games">
+                    <h2>Stage18 Badminton</h2>
+                    <h4>Jim<br><br>Thursday<br>6:00pm - 8:00pm</h4>
+                    <ol id="sbthur">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <button type="button" class="join" onclick="createPlayer(0)">Join</button>
+                </div>
+                <div class="games">
+                    <h2>Stage18 Badminton</h2>
+                    <h4>Jim<br><br>Saturday<br>8:00am - 10:00am</h4>
+                    <ol id="sbsat">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <button type="button" class="join" onclick="createPlayer(1)">Join</button>
+                </div>
+                <div class="games">
+                    <h2>Stage18 Badminton</h2>
+                    <h4>Jim<br><br>Sunday<br>8:00pm - 10:00pm</h4>
+                    <ol id="sbsun">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <button type="button" class="join" onclick="createPlayer(2)">Join</button>
+                </div>
+                <div class="games">
+                    <h2>Drive Badminton</h2>
+                    <h4>Vanessa<br><br>Thursday<br>10:00am - 12:00pm</h4>
+                    <ol id="dbthur">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <button type="button" class="join" onclick="createPlayer(3)">Join</button>
+                </div>
+                <div class="games">
+                    <h2>Drive Badminton</h2>
+                    <h4>Vanessa<br><br>Friday<br>10:00am - 12:00pm</h4>
+                    <ol id="dbfri">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <button type="button" class="join" onclick="createPlayer(4)">Join</button>
+                </div>
+            </div>
+
+            <div class="popUpForm">
+                <form class="formWrap" action="../scripts/signUp.js" onsubmit="return false">
+                    <div>
+                        <h2>Sign Up</h2>
+                    </div>
+
+                    <div class="formInfo">
+                        <label for="name">Enter your name</label>
+                        <input type="text" placeholder="Player Name" name="playerName" required>
+                    </div>
+
+                    <div class="formInfo">
+                        <label for="pin">Enter a Pin</label>
+                        <input type="password" placeholder="Used for Cancellation" name="pin" required>
+                    </div>
+
+                    <div class="formbtn">
+                        <button type="submit" class="btnSubmit">Sign Up</button>
+                        <button type="button" class="btnCancel">Close</button>
+                    </div>
+                    <input type="hidden" id="getListNum" name="listNum" value="" />
+                </form>
+
+                <form class="cancelWrap" action="../scripts/signUp.js" onsubmit="return false">
+                    <div>
+                        <h2>Cancellation</h2>
+                    </div>
+
+                    <div class="formInfo">
+                        <label for="cPin">Enter your PIN</label>
+                        <input type="text" placeholder="PIN" name="cPin" />
+                    </div>
+
+                    <div class="formbtn">
+                        <button type="submit" class="btnSubmit">Cancel</button>
+                        <button type="button" class="btnCancel">Close</button>
+                    </div>
+                    <input type="hidden" id="getCancelList" name="cancelList" value="" />
+                    <input type="hidden" id="getIndex" name="cancelIndex" value="" />
+                </form>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <h5>Copyright &copy 2023 Lucas Lo<br>All Rights Reserved</h5>
+        </footer>
+
+        <script type="module">
+
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+            import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Firebase config
+            const firebaseConfig = {
+                apiKey: "AIzaSyB7l-nOyqTQTaZql3AC1dBjkatV-5ymeUo",
+                authDomain: "badminton-123.firebaseapp.com",
+                databaseURL: "https://badminton-123-default-rtdb.firebaseio.com",
+                projectId: "badminton-123",
+                storageBucket: "badminton-123.appspot.com",
+                messagingSenderId: "118490043749",
+                appId: "1:118490043749:web:f9688ea005a939c8edfd8c"
+            };
+
+            // Initialize firebase and real time database
+            const core = initializeApp(firebaseConfig);
+            const db = getDatabase();
+
+            // Add player object to database;
+            function pushObj(player, index) {
+                let title = "";
+                if (player.list == 0) {
+                    title = "Jim-Thurs/";
+                } else if (player.list == 1) {
+                    title = "Jim-Sat/";
+                } else if (player.list == 2) {
+                    title = "Stan-Sun/";
+                } else if (player.list == 3) {
+                    title = "Van-Thurs/";
+                } else if (player.list == 4) {
+                    title = "Van-Fri/";
+                }
+
+                // write user data
+                function pushPlayerToDb(userId, pin, listId, listIndex) {
+                    const reference = ref(db, title + userId);
+
+                    set(reference, {
+                        passw: pin,
+                        list: listId,
+                        i: listIndex
+                    });
+                }
+
+                // Calls above function with parameter data
+                pushPlayerToDb(player.playerName, player.password, player.list, index);
+            }
+
+            // exports
+            export { pushObj };
+            window.pushObj = pushObj;
+
+        </script>
+    </body>
+
+</html>
