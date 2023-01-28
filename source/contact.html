@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" name="viewport" content="width=device-width, initial-scale = 1, maximum-scale = 1">
+    <link rel="stylesheet" type="text/css" href="styles/frontPage.css">
+    <title>RBC</title>
+    <style>
+        body{
+            background-color: rgb(140, 202, 111);
+        }
+
+        .contacts{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hostContact{
+            display: flex;
+            flex-direction: column;
+            background-color: #202020;
+            border-radius: 30px;
+            padding: 30px;
+            margin-top: 60px;
+            width: 70%;
+            color: white;
+        }
+
+        .hostContact h1{
+            background-color: #202020;
+            font-size: 30px;
+        }
+
+        .meContact{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            background-color: rgb(200, 200, 200);
+            border: 2px solid rgb(60, 60, 60);
+            border-radius: 30px;
+            padding: 20px;
+            width: 70%;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+
+        .meContact h1{
+            background-color: rgb(200, 200, 200);
+            font-size: 25px;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .contacts{
+                flex-direction: row;
+                justify-content: center;
+                gap: 30px;
+                margin-bottom: 150px;
+                margin-top: 150px
+            }
+
+            .hostContact{
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="game.html">GAMES</a></li>
+                <li><a href="event.html">EVENTS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li> <a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contacts">
+            <div class="hostContact">
+                <h1>Host Contact</h1>
+                <div>
+                    <h4>Jim</h4>
+                    <h5>Contact Method</h5>
+                </div>
+                <div>
+                    <h4>Vanessa</h4>
+                    <h5>Contact Method</h5>
+                </div>
+                <div>
+                    <h4>Stan</h4>
+                    <h5>Contact Method</h5>
+                </div>
+            </div>
+            <div class="meContact">
+                <h1>Technical Contact</h1>
+                <p>If you wish to join us as a host<br>If you have any inquires about "Club Name"<br>If you have any suggestions or feedbacks</p>
+                <p>Forward an Email to: michaelnggg@hotmail.com</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h5>Copyright &copy 2023 Lucas Lo<br>All Rights Reserved</h5>
+    </footer>
+
+</body>
+
+</html>

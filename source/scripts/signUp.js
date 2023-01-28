@@ -32,22 +32,35 @@ function player(name, pass, num) {
     this.list = num;
 }
 
+// Sets forms to invisible 
+const body = document.querySelector("#body"); // This is just here
+const forms = document.querySelector(".popUpForm");
+const cancelForm = document.querySelector(".cancelWrap");
+const signUpForm = document.querySelector(".formWrap");
+const rulesDiv = document.querySelector(".rules");
+cancelForm.style.display = "none";
+signUpForm.style.display = "none"; 
+rulesDiv.style.display = "none";
+
 // Sets all form to invisible on click
 const cancelButtons = document.querySelectorAll(".btnCancel");
 cancelButtons.forEach((cancelButton) => {
     cancelButton.addEventListener("click", event => {
         signUpForm.style.display = "none";
         cancelForm.style.display = "none";
+        rulesDiv.style.display = "none";
+        forms.style.left = "1500px";
         body.style.overflow = "visible";
     });
 });
 
-// Sets forms to invisible 
-const body = document.querySelector("#body"); // This is just here
-const cancelForm = document.querySelector(".cancelWrap");
-const signUpForm = document.querySelector(".formWrap");
-cancelForm.style.display = "none";
-signUpForm.style.display = "none"; 
+// Rules button
+const rulesBtn = document.querySelector(".rulesBtn");
+rulesBtn.addEventListener("click", event => {
+    forms.style.left = "auto";
+    body.style.overflow = "hidden";
+    rulesDiv.style.display = "";
+});
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cancel Button Section ~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -98,6 +111,7 @@ cancelForm.addEventListener("submit", (event) => {
     let list = cList.value;
 
     remove(pin, i, list);
+    forms.style.left = "1500px";
     cancelForm.style.display = "none";
     body.style.overflow = "visible";
 });
@@ -111,6 +125,7 @@ function prepCancelForm(list, i) {
     cIndex.value = i;
 
     cancelForm.style.display = "";
+    forms.style.left = "auto";
     body.style.overflow = "hidden";
 }
 
@@ -131,6 +146,7 @@ function createBtn(index, listNum) {
 
 function closeCancel() {
     cancelForm.style.display = "none";
+    forms.style.left = "1500px";
     body.style.overflow = "visible";
 }
 
@@ -229,6 +245,7 @@ signUpForm.addEventListener("submit", (event) => {
 
     const person = new player(playerName, pin, list);
     signUpForm.style.display = "none";
+    forms.style.left = "1500px";
     body.style.overflow = "visible";
 
     update(person);
@@ -237,12 +254,14 @@ signUpForm.addEventListener("submit", (event) => {
 // Gathers info for sign up form
 function createPlayer(num) {
     signUpForm.style.display = "";
+    forms.style.left = "auto";
     const list = document.getElementById("getListNum");
     list.value = num;
     body.style.overflow = "hidden";
 }
 
 function closeSignUp() {
+    forms.style.left = "1500px";
     signUpForm.style.display = "none";
     body.style.overflow = "visible";
 }

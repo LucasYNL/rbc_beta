@@ -1,11 +1,15 @@
 
 /*--------------------------------------------------- Mobile ------------------------------------------------------*/
+body{
+    background-color: rgb(140, 202, 111);
+}
+
 main{
     width: 100%;
 }
 
 main h1 {
-    font-size: 20px;
+    font-size: 23px;
     text-align: center;
     color: red;
     border: 1px solid #202020;
@@ -14,8 +18,31 @@ main h1 {
     padding: 5px;
     width: 70%;
     padding-top: 10px;
-    padding-bottom: 10px;
     margin-top: 40px;
+}
+
+.easySelect{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.easySelect li{
+    text-align: center;
+    background-color: #202020;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.easySelect li a{
+    color: white;
+    text-decoration: none;
 }
 
 .gameDays {
@@ -32,12 +59,23 @@ main h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 70%;
     background-color: #202020;
     color: #ffffff;
     border-radius: 15px;
     text-align: center;
     border: 3px solid black;
+}
+
+.games h3{
+    font-size: 23px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.games h4{
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 ol {
@@ -79,6 +117,7 @@ ol li button {
     margin-top: 30px;
     position: fixed;
     top: 30%;
+    left: 1500px;
 }
 
 .formWrap {
@@ -99,6 +138,49 @@ ol li button {
     background-color: lightgrey;
     padding: 10px;
     gap: 20px;
+}
+
+.rules{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #202020;
+    border-radius: 15px;
+    background-color: lightgrey;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+.rules h1{
+    margin: auto;
+    padding: auto;
+    margin-top: 10px;
+}
+
+.rules ul li{
+    margin-top: 10px;
+}
+
+.rules button{
+    border: 1px solid #202020;
+    border-radius: 20px;
+    background-color: #202020;
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.rulesBtn{
+    border: 1px solid #202020;
+    background-color: #202020;
+    padding: 0;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
 }
 
 .formInfo{
@@ -129,6 +211,7 @@ ol li button {
 .btnCancel{
     background-color: rgb(200, 50, 50, 40%)
 }
+
 /*------------------------------------------------------ Desktop -----------------------------------------------------*/
 
 @media only screen and (min-width: 600px) {
@@ -161,6 +244,10 @@ ol li button {
         width: 200px;
     }
 
+    .easySelect{
+        display: none;
+    }
+
     .popUpForm {
         width: 30%;
     }
@@ -169,5 +256,9 @@ ol li button {
 @media only screen and (min-width: 1401px){
     .popUpForm {
         width: 20%;
+    }
+
+    .easySelect{
+        display: none
     }
 }

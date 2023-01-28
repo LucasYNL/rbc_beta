@@ -23,12 +23,21 @@
         </header>
 
         <main>
-            <h1>Please read the terms and conditions<br>if you have not before joining.</h1>
+            <h1>Please read the rules <button type="button" class="rulesBtn">here</button><br>if you have not before signing up</h1>
             <h2>WEEK PENDING</h2>
+            <ul class="easySelect">
+                <li><a href="#sbthurJump">Stage18 Thursday 6pm-8pm</a></li>
+                <li><a href="#sbsatJump">Stage18 Saturday 8am-10am</a></li>
+                <li><a href="#sbsunJump">Stage18 Sunday 6pm-8pm</a></li>
+                <li><a href="#dbthurJump">Drive Thursday 10am-12am</a></li>
+                <li><a href="#dbfriJump">Drive Friday 10am-12am</a></li>
+            </ul>
             <div class="gameDays">
-                <div class="games">
+                <div class="games" id="sbthurJump">
                     <h2>Stage18 Badminton</h2>
-                    <h4>Jim<br><br>Thursday<br>6:00pm - 8:00pm</h4>
+                    <h3>Jim</h3>
+                    <h4>Fee: $13<br>Cash or EMT to jim'semt@hotmail.com<br>Include name in notes</h4>
+                    <h4>Thursday<br>6:00pm - 8:00pm</h4>
                     <ol id="sbthur">
                         <li></li>
                         <li></li>
@@ -57,9 +66,11 @@
                     </ol>
                     <button type="button" class="join" onclick="createPlayer(0)">Join</button>
                 </div>
-                <div class="games">
+                <div class="games" id="sbsatJump">
                     <h2>Stage18 Badminton</h2>
-                    <h4>Jim<br><br>Saturday<br>8:00am - 10:00am</h4>
+                    <h3>Jim</h3>
+                    <h4>Fee: $13<br>Cash or EMT to jim'semt@hotmail.com<br>Include name in notes</h4>
+                    <h4>Saturday<br>8:00am - 10:00am</h4>
                     <ol id="sbsat">
                         <li></li>
                         <li></li>
@@ -76,9 +87,11 @@
                     </ol>
                     <button type="button" class="join" onclick="createPlayer(1)">Join</button>
                 </div>
-                <div class="games">
+                <div class="games" id="sbsunJump">
                     <h2>Stage18 Badminton</h2>
-                    <h4>Jim<br><br>Sunday<br>8:00pm - 10:00pm</h4>
+                    <h3>Stan</h3>
+                    <h4>Fee: $14<br>Cash or EMT to stan'semt@hotmail.com<br>Include name in notes</h4>
+                    <h4>Sunday<br>8:00pm - 10:00pm</h4>
                     <ol id="sbsun">
                         <li></li>
                         <li></li>
@@ -107,9 +120,11 @@
                     </ol>
                     <button type="button" class="join" onclick="createPlayer(2)">Join</button>
                 </div>
-                <div class="games">
+                <div class="games" id="dbthurJump">
                     <h2>Drive Badminton</h2>
-                    <h4>Vanessa<br><br>Thursday<br>10:00am - 12:00pm</h4>
+                    <h3>Vanessa</h3>
+                    <h4>Fee: $13<br>Cash or EMT to van'semt@hotmail.com<br>Include name in notes</h4>
+                    <h4>Wednesday<br>10:00am - 12:00am</h4>
                     <ol id="dbthur">
                         <li></li>
                         <li></li>
@@ -132,9 +147,11 @@
                     </ol>
                     <button type="button" class="join" onclick="createPlayer(3)">Join</button>
                 </div>
-                <div class="games">
+                <div class="games" id="dbfriJump">
                     <h2>Drive Badminton</h2>
-                    <h4>Vanessa<br><br>Friday<br>10:00am - 12:00pm</h4>
+                    <h3>Vanessa</h3>
+                    <h4>Fee: $13<br>Cash or EMT to van'semt@hotmail.com<br>Include name in notes</h4>
+                    <h4>Thursday<br>10:00am - 12:00am</h4>
                     <ol id="dbfri">
                         <li></li>
                         <li></li>
@@ -200,6 +217,17 @@
                     <input type="hidden" id="getIndex" name="cancelIndex" value="" />
                 </form>
 
+                <div class="rules">
+                    <h1>Rules</h1>
+                    <ul>
+                        <li>You have 24 hours before game start time to cancel, otherwise, you are responsible for finding a replacement and the game fees</li>
+                        <li>All players must be wearing badminton shoes (Most locations offer rental)</li>
+                        <li>No negative behaviour of any kind (exp. Discrimination, Racism, Profanity, Harrassement, etc)<br>Though we do encourge competitiveness in a positive manner</li>
+                        <li>Ask front desk for court numbers under host name</li>
+                        <li>HAVE FUN, BADDY IS FUN</li>
+                    </ul>
+                    <button type="button" class="btnCancel">Close</button>
+                </div>
             </div>
 
         </main>

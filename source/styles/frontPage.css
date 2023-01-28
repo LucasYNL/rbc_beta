@@ -11,6 +11,10 @@ body {
     font-family: Andale Mono, monospace;
 }
 
+body::-website-scrollbar{
+    display: none;
+}
+
 /*------ Header Section ------*/
 
 header {
@@ -35,7 +39,7 @@ nav ul {
     align-items: center;
     list-style-type: none;
     padding-left: 0;
-    gap: 10px;
+    gap: 3px;
 }
 
 nav ul li {
@@ -60,6 +64,7 @@ nav ul a {
     background-image: url(../images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .title div {
