@@ -11,8 +11,13 @@ body {
     font-family: Andale Mono, monospace;
 }
 
-body::-website-scrollbar{
+body::-webkit-scrollbar {
     display: none;
+}
+
+body{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /*------ Header Section ------*/

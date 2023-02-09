@@ -8,18 +8,18 @@ main{
     width: 100%;
 }
 
-main h1 {
-    font-size: 23px;
-    text-align: center;
-    color: red;
-    border: 1px solid #202020;
-    background-color: #202020;
-    border-radius: 15px;
-    padding: 5px;
-    width: 70%;
-    padding-top: 10px;
-    margin-top: 40px;
-}
+    main h1 {
+        font-size: 23px;
+        text-align: center;
+        color: red;
+        border: 1px solid #202020;
+        background-color: #202020;
+        border-radius: 15px;
+        padding: 5px;
+        width: 70%;
+        padding-top: 10px;
+        margin-top: 40px;
+    }
 
 .easySelect{
     display: flex;
@@ -212,6 +212,7 @@ ol li button {
     background-color: rgb(200, 50, 50, 40%)
 }
 
+
 /*------------------------------------------------------ Desktop -----------------------------------------------------*/
 
 @media only screen and (min-width: 600px) {
@@ -235,6 +236,14 @@ ol li button {
 
     ol{
         width: 180px;
+    }
+
+    .rules{
+        width: 150%;
+    }
+
+    .popUpForm{
+        margin-right: 200px;
     }
 
 }

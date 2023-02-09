@@ -239,7 +239,7 @@
         <script type="module">
 
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
-            import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+            import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
 
             // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -258,26 +258,31 @@
             const core = initializeApp(firebaseConfig);
             const db = getDatabase();
 
+            // Find List Name
+            function findList(num) {
+                if (num == 0) {
+                    return "Jim_Thurs/";
+                } else if (num == 1) {
+                    return "Jim_Sat/";
+                } else if (num == 2) {
+                    return "Stan_Sun/";
+                } else if (num == 3) {
+                    return "Van_Thurs/";
+                } else if (num == 4) {
+                    return "Van_Fri/";
+                }
+            }
+
             // Add player object to database;
             function pushObj(player, index) {
-                let title = "";
-                if (player.list == 0) {
-                    title = "Jim-Thurs/";
-                } else if (player.list == 1) {
-                    title = "Jim-Sat/";
-                } else if (player.list == 2) {
-                    title = "Stan-Sun/";
-                } else if (player.list == 3) {
-                    title = "Van-Thurs/";
-                } else if (player.list == 4) {
-                    title = "Van-Fri/";
-                }
+                let hostInfo = findList(player.list);
 
                 // write user data
-                function pushPlayerToDb(userId, pin, listId, listIndex) {
-                    const reference = ref(db, title + userId);
+                function pushPlayerToDb(userId, name, pin, listId, listIndex) {
+                    const reference = ref(db, hostInfo + userId);
 
                     set(reference, {
+                        playerName: name,
                         passw: pin,
                         list: listId,
                         i: listIndex
@@ -285,8 +290,39 @@
                 }
 
                 // Calls above function with parameter data
-                pushPlayerToDb(player.playerName, player.password, player.list, index);
+                pushPlayerToDb(index, player.playerName, player.password, player.list, index);
             }
+
+            // Pulls all information from database into a 3d Array
+            function findPlayers() {
+                for (let i = 0; i < 5; i++) {
+                    let hostInfo = findList(i);
+                    const dbReference = ref(db, hostInfo);
+
+                    onValue(dbReference, (snapshot) => {
+                        let list = snapshot.val();
+                        let ara = [];
+
+                        snapshot.forEach(function (childsnapshot){
+                            let item = childsnapshot.val();
+                            item.key = childsnapshot.key;
+                            ara.push(item);
+                        });
+                        fullList.push(ara);
+                    });
+                }
+            }
+
+            function fillPage(storage) {
+
+            }
+
+            // 3d array of all info on database
+            const fullList = [];
+            console.log(fullList);
+
+            findPlayers();
+            console.log(fullList);
 
             // exports
             export { pushObj };
